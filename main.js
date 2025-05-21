@@ -45,6 +45,7 @@ function setScore(subject, test, score, weighting) {
     };
   
     saveScores(scores);
+    calcAvg();
     renderTables();
 } 
 
@@ -97,7 +98,7 @@ function renderTables() {
     for (const subject in subjects) {
       // Create a header
       const title = document.createElement('h2');
-      title.textContent = subject + " - " + subjects[subject]["Average"];
+      title.textContent = subject + " - " + subjects[subject]["Average"].toFixed(2);
       container.appendChild(title);
   
       // Create the table
@@ -168,24 +169,7 @@ function calculate_aggregate() {
   let weighted_averages = [];
 
   for (const subject in subjects) {
-    const tests = subjects[subject];
-
-    let test_score_weighted_sum = 0;
-    let test_score_weights_sum = 0;
-
-    for (const test in tests) {
-      let test_score = parseFloat(tests[test].Score);
-      let test_weight = parseFloat(tests[test].Weighting);
-
-      test_score_weighted_sum += test_score * test_weight;
-      test_score_weights_sum += test_weight;
-    }
-
-    if (test_score_weights_sum > 0) {
-      const subject_average = test_score_weighted_sum / test_score_weights_sum;
-      weighted_averages.push(subject_average);
-    }
-    subject_count++;
+    weighted_averages.push(parseFloat(subjects[subject]["Average"]));
   }
 
   let top_four = weighted_averages.sort((a,b) => b-a).slice(0, 4);
@@ -193,7 +177,7 @@ function calculate_aggregate() {
     total_aggregate += num;
   })
 
-  return subject_count > 0 ? total_aggregate : 0;
+  return total_aggregate;
 }
 
 
