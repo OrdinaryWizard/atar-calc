@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>WACE Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WACE Tracker</h1>
+    <p>by Aydon Joe</p>
+
+    <button id="add-test-score-show">Add Score</button>
+
+    <div id="add-test-score" class="popup">
+        <table>
+            <tr>
+                <td>Subject: </td>
+                <td><input type="text" id="subject-name" /></td>
+            </tr>
+            <tr>
+                <td>Test: </td>
+                <td><input type="text" id="test-name" /></td>
+            </tr>
+            <tr>
+                <td>Score: </td>
+                <td><input type="text" id="test-score" /></td>
+            </tr>
+            <tr>
+                <td>Weighting: </td>
+                <td><input type="text" id="test-weighting" /></td>
+            </tr>
+            <tr>
+                <td><button id="close-add-score-menu" class="menu-action">Close</button></td>
+                <td><button id="add-score" class="menu-action">Add Score</button></td>
+            </tr>
+        </table>
+
+        
+    </div>
+
+    <h1>Subjects</h1>
+    <div id="tables">
+
+    </div>
+
+    <div id="aggregate-display" class="section">
+        <table>
+            <tr>
+                <th>Get ATAR</th>
+                <th>Aggregate</th>
+                <th>ATAR</th>
+            </tr>
+            <tr>
+                <td><button id="atar-display-button">Get ATAR</button></td>
+                <td><p id="aggregate-display-p">0</p></th>
+                <td><p id="atar-display">0</p></td>
+            </tr>
+        </table>
+    </div>
+
+    <button onclick="localStorage.clear(); location.reload()">Clear All</button>
+    <button onclick="alert('Copy and paste the next popup somewhere safe'); alert(localStorage.getItem('classScores'))">Export Scores</button>
+    <button onclick="alert('Paste your saved scores in the next popup'); localStorage.setItem('classScores', prompt('Enter your saved score')); location.reload()">Import Scores</button>
+
+    <script src="main.js"></script>
+    <script src="menus.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#add-test-score {
+    display: none;
+    border: 5px solid black;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+div {
+    padding: 10px;
+    border: 1px solid;
+}
