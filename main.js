@@ -188,3 +188,5 @@ document.getElementById("atar-display-button").onclick = function () {
   atar_display_p.textContent = calculate_ATAR(calculate_aggregate()).toFixed(2);
   aggregate_display_p.textContent = calculate_aggregate().toFixed(2);
 }
+
+document.getElementById("atar-display-button").click()

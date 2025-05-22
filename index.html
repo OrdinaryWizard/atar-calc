@@ -6,40 +6,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>WACE Tracker</h1>
-    <p>by Aydon Joe</p>
+    <div id="titlebar">
+        <h3>WACE Tracker</h3>
+    </div>
 
     <button id="add-test-score-show">Add Score</button>
 
     <div id="add-test-score" class="popup">
-        <table>
+        <table id="add-test-score-table">
             <tr>
-                <td>Subject: </td>
-                <td><input type="text" id="subject-name" /></td>
+                <td class="menu-table">Subject: </td>
+                <td class="menu-table"><input type="text" id="subject-name" /></td>
             </tr>
             <tr>
-                <td>Test: </td>
-                <td><input type="text" id="test-name" /></td>
+                <td class="menu-table">Test: </td>
+                <td class="menu-table"><input type="text" id="test-name" /></td>
             </tr>
             <tr>
-                <td>Score: </td>
-                <td><input type="text" id="test-score" /></td>
+                <td class="menu-table">Score: </td>
+                <td class="menu-table"><input type="text" id="test-score" /></td>
             </tr>
             <tr>
-                <td>Weighting: </td>
-                <td><input type="text" id="test-weighting" /></td>
+                <td class="menu-table">Weighting: </td>
+                <td class="menu-table"><input type="text" id="test-weighting" /></td>
             </tr>
             <tr>
-                <td><button id="close-add-score-menu" class="menu-action">Close</button></td>
-                <td><button id="add-score" class="menu-action">Add Score</button></td>
+                <td class="menu-table"><button id="close-add-score-menu" class="menu-action">Close</button></td>
+                <td class="menu-table"><button id="add-score" class="menu-action">Add Score</button></td>
             </tr>
         </table>
 
         
     </div>
 
-    <h1>Subjects</h1>
     <div id="tables">
+        <h1>Subjects</h1>
 
     </div>
 
