@@ -149,7 +149,7 @@ calcAvg()
 renderTables()
 
 var add_score_button = document.getElementById("add-score");
-var add_score_subject = document.getElementById("subject-name");
+var add_score_subject = document.getElementById("cars");
 var add_score_test_name = document.getElementById("test-name");
 var add_score_test_score = document.getElementById("test-score");
 var add_score_test_weighting = document.getElementById("test-weighting");

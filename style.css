@@ -1,48 +1,95 @@
 html {
-    font-family: Arial; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
+
+#titlebar {
+    padding: 1rem;
+    background-color: #20232a;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#main-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2 {
+    margin: 0 0 1rem 0;
+}
+
+button {
+    background-color: #20232a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #444950;
+}
+
+button.secondary {
+    background-color: #888;
+}
+button.secondary:hover {
+    background-color: #aaa;
+}
+
+button.primary {
+    background-color: #0066cc;
+}
+button.primary:hover {
+    background-color: #004999;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
 #add-test-score {
     display: none;
-    border: 1px solid black;
-    width: fit-content;
-    margin: 10px;
-    padding: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-#add-test-score-table {
-    border: 0px;
-    width: 50%;
-    border-collapse: none;
-}
-.menu-table {
-    border: none;
-    border-collapse: none;
-}
-table, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
-    width: 100%;
-    padding: 5px;
-}
-div {
-    margin: 10px;
-}
-#titlebar {
-    padding: 10px;
-    background-color: rgb(31, 31, 31);
-    color: white;
-}
-button {
-    background-color: rgb(31, 31, 31);
-    padding: 10px;
-    color: white;
-    border: none;
-}
-button:hover {
-    background-color: rgb(64, 64, 64);
-    padding: 10px;
-    color: white;
-    border: none;
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }

@@ -4,11 +4,12 @@ var close_add_score_menu = document.getElementById("close-add-score-menu");
 
 show_add_score_menu.onclick = function () {
     if (add_score_menu.style.display == 'none') {
+        show_add_score_menu.value = "Close";
         add_score_menu.style.display = 'block';
     } else {
         add_score_menu.style.display = 'none';
     }
 }
 close_add_score_menu.onclick = function () {
-    add_score_menu.style.display = 'none';
+    show_add_score_menu.style.display = 'block';
 }
