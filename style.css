@@ -51,6 +51,9 @@ button.secondary:hover {
 button.primary {
     background-color: #0066cc;
 }
+button.deleter {
+    background-color: #da3333;
+}
 button.primary:hover {
     background-color: #004999;
 }
@@ -69,6 +72,16 @@ table {
     margin-top: 10px;
     border-collapse: collapse;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-top: 5px solid rgba(0,0,0,0.1);
+}
+
+#tables div {
+    padding: 10px;
+    margin-top: 10px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 

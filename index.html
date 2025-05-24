@@ -1,86 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>WACE Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image.png">
 </head>
 <body>
-    <div id="titlebar">
-        <h3>WACE Tracker</h3>
-    </div>
+    <header id="titlebar">
+        <h1>WACE Tracker</h1> <p>by Aydon Joe</p>
+    </header>
 
-    <div id="main-content">
-        <button id="add-test-score-show">Add Score</button>
+    <main id="main-content">
+        <section class="actions">
+            <button id="add-test-score-show">Add Score</button>
+        </section>
 
-        <div id="add-test-score" class="popup">
+        <section id="add-test-score" class="popup">
+            <h2>Add a New Test Score</h2>
             <table id="add-test-score-table">
                 <tr>
-                    <td class="menu-table">Subject: </td>
-                    <td class="menu-table">
-                        <select name="cars" id="cars">
-                            <option value="Accounting"> Accounting </option>
-                            <option value="Specialist"> Specialist </option>
-                            <option value="Methods"> Methods </option>
-                            <option value="Physics"> Physics </option>
-                            <option value="Chemistry"> Chemistry </option>
-                            <option value="Human Biology"> Human Biology </option>
-                            <option value="Biology"> Biology </option>
-                            <option value="English"> English </option>
-                            <option value="Applications"> Applications </option>
-                            <option value="Economics"> Economics </option>
-                            <option value="Japanese"> Japanese </option>
-                            <option value="German"> German </option>
-                            <option value="Modern History"> Modern History </option>
-                            <option value="Psychology"> Psychology </option>
-                    </select>
+                    <td>Subject:</td>
+                    <td>
+                        <select id="cars">
+                            <option value="" disabled selected>Select subject</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Specialist">Specialist</option>
+                            <option value="Methods">Methods</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Human Biology">Human Biology</option>
+                            <option value="Biology">Biology</option>
+                            <option value="English">English</option>
+                            <option value="Applications">Applications</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="German">German</option>
+                            <option value="Modern History">Modern History</option>
+                            <option value="Psychology">Psychology</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
-                    <td class="menu-table">Test: </td>
-                    <td class="menu-table"><input type="text" id="test-name" /></td>
+                    <td>Test:</td>
+                    <td><input type="text" id="test-name" placeholder="Test name"/></td>
                 </tr>
                 <tr>
-                    <td class="menu-table">Score: </td>
-                    <td class="menu-table"><input type="text" id="test-score" /></td>
+                    <td>Score:</td>
+                    <td><input type="number" id="test-score" placeholder="e.g. 85"/></td>
                 </tr>
                 <tr>
-                    <td class="menu-table">Weighting: </td>
-                    <td class="menu-table"><input type="text" id="test-weighting" /></td>
+                    <td>Weighting:</td>
+                    <td><input type="number" id="test-weighting" placeholder="e.g. 20"/></td>
                 </tr>
                 <tr>
-                    <td class="menu-table"><button id="close-add-score-menu" class="menu-action">Close</button></td>
-                    <td class="menu-table"><button id="add-score" class="menu-action">Add Score</button></td>
+                    <td><button id="delete-score" class="deleter">Delete Score</button></td>
+                    <td><button id="add-score" class="primary">Add/Edit Score</button></td>
+                    <td><button id="delete-subject">Delete Subject</button></td>
                 </tr>
             </table>
+        </section>
 
-            
-        </div>
+        <section id="tables">
+            <h2>Subjects</h2>
+            <!-- Subject tables will be added here dynamically -->
+        </section>
 
-        <div id="tables">
-            <h1>Subjects</h1>
-
-        </div>
-
-        <div id="aggregate-display" class="section">
+        <section id="aggregate-display" class="section">
+            <h2>Results Summary</h2>
             <table>
-                <tr>
-                    <th>Get ATAR</th>
-                    <th>Aggregate</th>
-                    <th>ATAR</th>
-                </tr>
-                <tr>
-                    <td><button id="atar-display-button">Get ATAR</button></td>
-                    <td><p id="aggregate-display-p">0</p></th>
-                    <td><p id="atar-display">0</p></td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Get ATAR</th>
+                        <th>Aggregate</th>
+                        <th>ATAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button id="atar-display-button">Get ATAR</button></td>
+                        <td><p id="aggregate-display-p">0</p></td>
+                        <td><p id="atar-display">0</p></td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
+        </section>
 
-        <button onclick="localStorage.clear(); location.reload()">Clear All</button>
-        <button onclick="alert('Copy and paste the next popup somewhere safe'); alert(localStorage.getItem('classScores'))">Export Scores</button>
-        <button onclick="alert('Paste your saved scores in the next popup'); localStorage.setItem('classScores', prompt('Enter your saved score')); location.reload()">Import Scores</button>
-    </div>
+        <section class="actions">
+            <button onclick="localStorage.clear(); location.reload()">Clear All</button>
+            <button onclick="alert('Copy and paste the next popup somewhere safe'); alert(localStorage.getItem('classScores'))">Export Scores</button>
+            <button onclick="alert('Paste your saved scores in the next popup'); localStorage.setItem('classScores', prompt('Enter your saved score')); location.reload()">Import Scores</button>
+        </section>
+    </main>
 
     <script src="main.js"></script>
     <script src="menus.js"></script>
