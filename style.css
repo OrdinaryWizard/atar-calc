@@ -1,7 +1,9 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
     margin: 0;
     background-color: #f4f4f4;
@@ -13,6 +15,27 @@ body {
     background-color: #20232a;
     color: #fff;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+#footer {
+    padding: 1rem;
+    width: 100%;
+    background-color: #20232a;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+#footer button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: none;
+}
+#footer {
+    padding: 1rem;
+    width: 100%;
+    background-color: #20232a;
+    color: #fff;
+    text-align: left;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -83,6 +106,7 @@ table {
     border-collapse: collapse;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
 th, td {
@@ -105,4 +129,27 @@ th, td {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#tables table td:nth-child(2) { 
+    text-align: end; 
+}
+#tables table td:nth-child(3) { 
+    text-align: end; 
+}
+#tables table th:nth-child(2) { 
+    text-align: end; 
+}
+#tables table th:nth-child(3) { 
+    text-align: end; 
+}
+#tables table th:nth-child(1) { 
+    width: 75%;
+}
+#tables table td:nth-child(1) { 
+    width: 75%;
 }

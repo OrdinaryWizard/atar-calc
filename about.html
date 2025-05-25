@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WACE Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image.png">
+</head>
+<body>
+    <header id="titlebar">
+        <h1><a href="index.html" style="color: inherit;text-decoration: inherit;">WACE Tracker</a></h1> <p>by Aydon Joe</p>
+    </header>
+
+    <main id="main-content">
+        <h1>About</h1>
+        <p><a href="https://ordinarywizard.github.io/atar-calc" target="_blank">Predict your ATAR with scaling</a></p>
+
+        <p>This is a project I started to fill a void I found in most ATAR calculators. Most tools just ask for your final mark, so you have to go through and find your averages on Connect or SEQTA, calculate them yourself, and then plug them in—which I thought was a huge waste of time.</p>
+      
+        <p>Instead, this ATAR calculator lets you punch in your individual test scores for each subject as they occur. This makes tracking your ATAR a lot easier, especially since your data is saved locally in the browser.</p>
+      
+        <p>It also includes basic functionality for scaling your subjects. I used last year's data from <a href="https://www.tisc.edu.au/static-fixed/statistics/misc/average-marks-scaling.pdf" target="_blank">this TISC document</a> to base the scaling off, and I believe it’s pretty solid for the supported subjects so far.</p>
+      
+        <p>Currently, scaling is supported for:</p>
+        <ul>
+          <li>Physics</li>
+          <li>English</li>
+          <li>Methods</li>
+        </ul>
+      
+        <p>The whole website was originally based on a <a href="https://raw.githubusercontent.com/OrdinaryWizard/atar-calc/refs/heads/main/Grade%20Calculator%20copy.xlsx" target="_blank">spreadsheet</a> I made earlier this year. I found it unintuitive though, so I turned it into a website instead.</p>
+      
+        <p>You can use the tool by heading over to the <a href="https://ordinarywizard.github.io/atar-calc" target="_blank">website</a> or cloning the repo and launching <code>index.html</code>.</p>
+      
+        <button onclick="location.replace('index.html')">Go Back</button>
+    </main>
+</body>

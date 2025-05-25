@@ -9,7 +9,7 @@
 </head>
 <body>
     <header id="titlebar">
-        <h1>WACE Tracker</h1> <p>by Aydon Joe</p>
+        <h1><a href="index.html" style="color: inherit;text-decoration: inherit;">WACE Tracker</a></h1> <p>by Aydon Joe</p>
     </header>
 
     <main id="main-content">
@@ -68,7 +68,7 @@
         </section>
 
         <section id="aggregate-display" class="section">
-            <h2>Results Summary</h2>
+            <h2>Results</h2>
             <table>
                 <thead>
                     <tr>
@@ -92,8 +92,14 @@
             <button onclick="alert('Copy and paste the next popup somewhere safe'); alert(localStorage.getItem('classScores'))">Export Scores</button>
             <button onclick="alert('Paste your saved scores in the next popup'); localStorage.setItem('classScores', prompt('Enter your saved score')); location.reload()">Import Scores</button>
         </section>
-    </main>
 
+        <hr>
+
+    </main>
+    <footer id="footer">
+        <button onclick="location.replace('about.html')" class="secondary">About</a>
+        <button onclick="location.replace('disclaimer.html')" class="secondary">Disclaimer!</a>
+    </footer>
     <script src="main.js"></script>
     <script src="menus.js"></script>
 </body>

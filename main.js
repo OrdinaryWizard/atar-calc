@@ -1,36 +1,24 @@
-function calculate_ATAR(TEA) {
-  return (-2.7635438e-48) * (TEA ** 20) +
-  (6.9433012e-45) * (TEA ** 19) +
-  (-6.2752476e-42) * (TEA ** 18) +
-  (2.3289491e-39) * (TEA ** 17) +
-  (-3.5760048e-37) * (TEA ** 16) +
-  (1.4556192e-34) * (TEA ** 15) +
-  (-2.2232809e-32) * (TEA ** 14) +
-  (-4.7165891e-29) * (TEA ** 13) +
-  (8.4804129e-27) * (TEA ** 12) +
-  (5.2754546e-24) * (TEA ** 11) +
-  (-2.0604966e-21) * (TEA ** 10) +
-  (3.5652122e-18) * (TEA ** 9) +
-  (-2.839338e-15) * (TEA ** 8) +
-  (7.12259e-13) * (TEA ** 7) +
-  (3.3645452e-11) * (TEA ** 6) +
-  (-2.4261277e-8) * (TEA ** 5) +
-  (-9.2526176e-6) * (TEA ** 4) +
-  (0.0047034058) * (TEA ** 3) +
-  (-0.70128584) * (TEA ** 2) +
-  (36.658041) * TEA +
-  0.79894925;
-}
+function calculate_ATAR(x1) {
+  const A = [-48.02874, -9.68991, 5.33339, 3.19566, 0.712293, 0.84658, 1.34884, 1.11246, 0.512548, 0.0880827];
+  const T = 929.62593;
+  const c = 64.23399;
+  let sum = 0;
 
+  for (let n = 1; n <= A.length; n++) {
+    sum += A[n - 1] * Math.cos((2 * Math.PI * n * x1) / T);
+  }
+
+  return sum + c;
+}
 const scaling_values = {
   "Accounting": [1, 0],
   "Specialist": [1, 0],
-  "Methods": [0.880398671,	12.15614618],
-  "Physics": [0.902302427, 8.577349098],
-  "Chemistry": [1, 0],
+  "Methods": [0.67688378,	20.47713921],
+  "Physics": [0.892307692,	5.528],
+  "Chemistry": [0.846994536,	9.316393443],
   "Human Biology": [1, 0],
   "Biology": [1, 0],
-  "English": [0.909535452,	3.241466993],
+  "English": [1.383928571,	-23.97321429],
   "Applications": [1, 0],
   "Economics": [1, 0],
   "Japanese": [1, 0],
@@ -156,7 +144,7 @@ function renderTables() {
     const division = document.createElement('div');
     container.appendChild(division)
     // Create a header
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     const average = document.createElement('p');
     const scaled = document.createElement('p');
     title.textContent = subject;
