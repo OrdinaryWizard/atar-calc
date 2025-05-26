@@ -109,7 +109,7 @@ function scaleScores() {
   for (const subject in subjects) {
     const average = subjects[subject]['Average']
 
-    subjects[subject]["Scaled Score"] = (average * scaling_values[subject][2]) * scaling_values[subject][0] + scaling_values[subject][1]
+    subjects[subject]["Scaled Score"] = (average * scaling_values[subject][0] + scaling_values[subject][1]) * scaling_values[subject][2]
   }
 
   saveScores(data);
