@@ -10,6 +10,10 @@ body {
     color: #333;
 }
 
+main {
+    margin-bottom: 10px;
+}
+
 #titlebar {
     padding: 1rem;
     background-color: #20232a;
@@ -17,33 +21,10 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-footer {
-    padding: 1rem;
-    width: 100%;
-    background-color: #20232a;
-    color: #fff;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-}
 #footer button {
-    margin-left: 10px;
-    margin-right: 10px;
     background: none;
+    color: black;
 }
-#footer {
-    padding: 1rem;
-    width: 100%;
-    background-color: #20232a;
-    color: #fff;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
 #main-content {
     padding: 20px;
     max-width: 50%;
