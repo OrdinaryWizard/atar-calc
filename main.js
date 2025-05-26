@@ -14,20 +14,20 @@ function calculate_ATAR(x1) {
   return sum + c;
 }
 const scaling_values = {
-  Accounting: [1, -20],
-  Specialist: [1, 0],
-  Methods: [0.67688378, 20.47713921],
-  Physics: [0.892307692, 5.528],
-  Chemistry: [0.846994536, 9.316393443],
+  "Accounting": [1, -20],
+  "Specialist": [1, 0],
+  "Methods": [0.67688378, 20.47713921],
+  "Physics": [0.892307692, 5.528],
+  "Chemistry": [0.846994536, 9.316393443],
   "Human Biology": [1, 0],
-  Biology: [1, 0],
-  English: [1.383928571, -23.97321429],
-  Applications: [1, 0],
-  Economics: [1, 0],
-  Japanese: [1, 0],
-  German: [1, 0],
+  "Biology": [1, 0],
+  "English": [1.383928571, -23.97321429],
+  "Applications": [1, 0],
+  "Economics": [1, 0],
+  "Japanese": [1, 0],
+  "German": [1, 0],
   "Modern History": [1, 0],
-  Psychology: [1, 0],
+  "Psychology": [1, 0]
 };
 
 function loadScores() {
