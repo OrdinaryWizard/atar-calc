@@ -15,7 +15,7 @@ function calculate_ATAR(x1) {
 }
 const scaling_values = {
   "Accounting": [1, -20],
-  "Specialist": [1, 0],
+  "Specialist": [0.650406504, 24.25121951],
   "Methods": [0.67688378, 20.47713921],
   "Physics": [0.892307692, 5.528],
   "Chemistry": [0.846994536, 9.316393443],
